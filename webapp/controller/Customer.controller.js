@@ -1,10 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageBox"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, MessageBox) {
         "use strict";
 
         return Controller.extend("at.clouddna.student00.zhoui5.controller.Customer", {
@@ -20,6 +21,22 @@ sap.ui.define([
                 let sText = oResourceBundle.getText(sKey);
 
                 return sText;
+            },
+
+            onSavePressed: function() {
+                let oView = this.getView(),
+                    oModel = oView.getModel(),
+                    oData = oModel.getData();
+
+                //let oInputCustomerId = oView.byId("customer_input_customerid");
+                //let sCustomerId = oInputCustomerId.getValue();
+
+                MessageBox.success(JSON.stringify(oData));
+
+                console.log("Customer Data: " + JSON.stringify(oData));
+
+                //alert("Hello world!");
+
             }
 
         });

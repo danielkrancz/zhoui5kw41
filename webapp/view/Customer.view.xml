@@ -62,5 +62,14 @@
             </HBox>
             -->
         </content>
+
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button text="Speichern" type="Accept" icon="sap-icon://save" press="onSavePressed"/>
+                </contentRight>
+            </Bar>
+        </footer>
+
     </Page>
 </mvc:View>
