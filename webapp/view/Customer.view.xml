@@ -35,9 +35,11 @@
                     <Label id="customer_label_gender" text="{i18n>app.gender}" />
                     <Select id="_IDGenSelect1" items="{genderModel>/genders}" selectedKey="{/gender}">
                         <items>
-                            <core:Item id="customer_item_template" key="{genderModel>}" text="{= ${genderModel>} === 'female' ? ${i18n>female} : ${i18n>male} }"/>
+                            <core:Item id="customer_item_template" key="{genderModel>}" text="{ path: 'genderModel>', formatter: '.genderFormatter'}"/>
+                        <!-- <core:Item id="customer_item_template" key="{genderModel>}" text="{= ${genderModel>} === 'female' ? ${i18n>female} : ${i18n>male} }"/> -->
                         <!--
                             <core:Item id="_IDGenItem3" key="female" text="{i18n>female}"/>
+                            <core:Item id="_IDGenItem2" key="male" text="{i18n>male}"/>
                             <core:Item id="_IDGenItem2" key="male" text="{i18n>male}"/>
                          -->
                         </items>
