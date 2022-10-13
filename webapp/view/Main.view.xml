@@ -5,36 +5,29 @@
             <Table headerText="{i18n>main.tableHeader}" items="{/customers}" alternateRowColors="true">
                 <columns>
 
-                    <Column>
-                        <Text text="{i18n>app.customerid}"/>
+                    <Column id="main_column_customerid">
+                        <Text id="main_text_customerid" text="{i18n>app.customerid}"/>
                     </Column>
-
-                    <Column>
-                        <Text text="{i18n>app.firstname}"/>
+                    <Column id="main_column_firstname">
+                        <Text id="main_text_firstname" text="{i18n>app.firstname}"/>
                     </Column>
-
-                    <Column>
-                        <Text text="{i18n>app.lastname}"/>
+                    <Column id="main_column_lastname">
+                        <Text id="main_text_lastname" text="{i18n>app.lastname}"/>
                     </Column>
-
-                    <Column>
-                        <Text text="{i18n>app.email}"/>
+                    <Column id="main_column_title">
+                        <Text id="main_text_title" text="{i18n>app.title}"/>
                     </Column>
-
-                    <Column>
-                        <Text text="{i18n>app.phone}"/>
+                    <Column id="main_column_gender">
+                        <Text id="main_text_gender" text="{i18n>app.gender}"/>
                     </Column>
-
-                    <Column>
-                        <Text text="{i18n>app.website}"/>
+                    <Column id="main_column_email" minScreenWidth="Desktop">
+                        <Text id="main_text_email" text="{i18n>app.email}"/>
                     </Column>
-
-                    <Column>
-                        <Text text="{i18n>app.gender}"/>
+                    <Column id="main_column_phone" minScreenWidth="Tablet" demandPopin="true">
+                        <Text id="main_text_phone" text="{i18n>app.phone}"/>
                     </Column>
-
-                    <Column>
-                        <Text text="{i18n>app.title}"/>
+                    <Column id="main_column_website" minScreenWidth="Tablet" demandPopin="true">
+                        <Text id="main_text_website" text="{i18n>app.website}"/>
                     </Column>
 
                 </columns>
@@ -42,14 +35,14 @@
                 <items>
                     <ColumnListItem>
                         <cells>
-                            <ObjectIdentifier title="{customerid}"/>
-                            <Text text="{firstname}"/>
-                            <Text text="{lastname}"/>
-                            <Text text="{email}"/>
-                            <Text text="{phone}"/>
-                            <Link text="{website}" href="https://{website}" target="_blank"/>
-                            <Text text="{= ${gender} === 'female' ? ${i18n>female} : ${i18n>male} }"/>
-                            <Text text="{title}"/>
+                        <ObjectIdentifier title="{customerid}"/>
+                        <Text text="{firstname}"/>
+                        <Text text="{lastname}"/>
+                        <Text text="{title}"/>
+                        <Text text="{= ${gender} === 'female' ? ${i18n>female} : ${i18n>male} }"/>
+                        <Text text="{email}"/>
+                        <Text text="{phone}"/>
+                        <Link text="{website}" href="https://{website}" target="_blank"/>
                         </cells>
                     </ColumnListItem>
                 </items>

@@ -7,7 +7,7 @@ sap.ui.define([
         return Controller.extend("at.clouddna.training00.zhoui5.controller.Main", {
 
             onInit: function(){
-
+                
             }
             
         });

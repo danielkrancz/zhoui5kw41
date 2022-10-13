@@ -10,7 +10,7 @@ sap.ui.define([
 
         return Controller.extend("at.clouddna.student00.zhoui5.controller.Customer", {
             onInit: function () {
-
+                
             },
 
             genderFormatter: function(sKey){
