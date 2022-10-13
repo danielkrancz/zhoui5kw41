@@ -74,7 +74,8 @@
         "settings": {
           "defaultBindingMode": "TwoWay",
           "defaultCountMode": "Inline",
-          "refreshAfterChange": false
+          "refreshAfterChange": false,
+          "useBatch": false
         }
       },
       "genderModel": {
