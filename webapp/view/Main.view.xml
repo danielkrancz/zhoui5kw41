@@ -1,0 +1,59 @@
+<mvc:View controllerName="at.clouddna.student00.zhoui5.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+
+            <Table headerText="{i18n>main.tableHeader}" items="{/customers}" alternateRowColors="true">
+                <columns>
+
+                    <Column>
+                        <Text text="{i18n>app.customerid}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>app.firstname}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>app.lastname}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>app.email}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>app.phone}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>app.website}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>app.gender}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>app.title}"/>
+                    </Column>
+
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectIdentifier title="{customerid}"/>
+                            <Text text="{firstname}"/>
+                            <Text text="{lastname}"/>
+                            <Text text="{email}"/>
+                            <Text text="{phone}"/>
+                            <Link text="{website}" href="https://{website}" target="_blank"/>
+                            <Text text="{= ${gender} === 'female' ? ${i18n>female} : ${i18n>male} }"/>
+                            <Text text="{title}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

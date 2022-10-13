@@ -1,13 +1,34 @@
 {
-    "customerid": "1000000123",
-    "firstname": "Max",
-    "lastname": "Mustermann",
-    "title": "Dr.",
-    "gender": "male",
-    "email": "max.mustermann@clouddna.at",
-    "phone": "+43676123456789",
-    "website": "www.clouddna.at",
-    "address": {
-        "city": "Wien"
-    }
+    "customers": [
+        {
+            "customerid": "1000000123",
+            "firstname": "Max",
+            "lastname": "Mustermann",
+            "title": "Dr.",
+            "gender": "male",
+            "email": "max.mustermann@clouddna.at",
+            "phone": "+43676123456789",
+            "website": "www.clouddna.at"
+        },
+        {
+            "customerid": "12324234",
+            "firstname": "John",
+            "lastname": "Doe",
+            "title": "",
+            "gender": "male",
+            "email": "jd@clouddna.at",
+            "phone": "0664789314578",
+            "website": "www.sap.com"
+        },
+        {
+            "customerid": "3333333",
+            "firstname": "Maria",
+            "lastname": "Musterfrau",
+            "title": "Mag.",
+            "gender": "female",
+            "email": "maria.musterfrau@clouddna.at",
+            "phone": "066412365789",
+            "website": "www.clouddna.at"
+        }
+    ]
 }
