@@ -1,0 +1,10 @@
+{
+    "customerid": "1000000123",
+    "firstname": "Max",
+    "lastname": "Mustermann",
+    "title": "Dr.",
+    "gender": "male",
+    "email": "max.mustermann@clouddna.at",
+    "phone": "+43676123456789",
+    "website": "www.clouddna.at"
+}
