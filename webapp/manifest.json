@@ -75,7 +75,7 @@
           "defaultBindingMode": "TwoWay",
           "defaultCountMode": "Inline",
           "refreshAfterChange": true,
-          "useBatch": false
+          "useBatch": true
         }
       },
       "genderModel": {
@@ -108,6 +108,13 @@
             "TargetCustomer"
           ]
         },
+        {
+            "name": "CreateCustomer",
+            "pattern": "createcustomer",
+            "target": [
+              "TargetCustomer"
+            ]
+          },
         {
           "name": "Main",
           "pattern": "",

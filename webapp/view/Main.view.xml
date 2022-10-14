@@ -3,6 +3,15 @@
         <content>
 
             <Table headerText="{i18n>main.tableHeader}" items="{/CustomerSet}" alternateRowColors="true" mode="Delete" delete="onDeleteModePressed">
+
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{i18n>main.tableHeader}"/>
+                        <ToolbarSpacer/>
+                        <Button text="Hinzufügen" icon="sap-icon://add" type="Accept" press="onCreateButtonPressed"/>
+                    </OverflowToolbar>
+                </headerToolbar>
+
                 <columns>
 
                     <Column id="main_column_customerid">

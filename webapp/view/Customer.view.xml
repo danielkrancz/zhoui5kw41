@@ -1,5 +1,18 @@
 <mvc:View controllerName="at.clouddna.student00.zhoui5.controller.Customer" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
     <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button type="Back" press="onNavBack"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Title text="{i18n>title}"/>
+                </contentMiddle>
+                <contentRight>
+                    <Button type="Emphasized" text="Daten aktualisieren" press="onReloadData"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
         <content>
             <f:SimpleForm
                 id="SimpleFormChange354"
@@ -21,7 +34,7 @@
                 singleContainerFullSize="false">
                 <f:content>
                     <Label id="customer_label_customerid" text="{i18n>app.customerid}" />
-                    <Input id="customer_input_customerid" value="{CustomerId}" />
+                    <Input id="customer_input_customerid" value="{CustomerId}" enabled="false"/>
 
                     <Label id="customer_label_firstname" text="{i18n>app.firstname}" />
                     <Input id="customer_input_firstname" value="{Firstname}" />
@@ -67,6 +80,7 @@
             <Bar>
                 <contentRight>
                     <Button text="Speichern" type="Accept" icon="sap-icon://save" press="onSavePressed"/>
+                    <Button text="Abbrechen" type="Reject" icon="sap-icon://decline" press="onCancelPressed"/>
                 </contentRight>
             </Bar>
         </footer>

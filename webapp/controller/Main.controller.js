@@ -57,6 +57,15 @@ sap.ui.define([
                 oRouter.navTo("RouteCustomer", {
                     path: encodeURIComponent(sPath)
                 });
+            },
+
+            onCreateButtonPressed: function(){
+                /*let oContext = this.getView().getModel().createEntry("/CustomerSet"),
+                    sPath = oContext.getPath();*/
+                
+                    let oRouter = this.getOwnerComponent().getRouter();
+
+                    oRouter.navTo("CreateCustomer", null, true);
             }
             
         });
