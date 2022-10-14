@@ -1,17 +1,41 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageBox"
+    "sap/m/MessageBox",
+    "sap/ui/core/routing/History"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, MessageBox) {
+    function (Controller, MessageBox, History) {
         "use strict";
 
         return Controller.extend("at.clouddna.student00.zhoui5.controller.Customer", {
+
             onInit: function () {
-                
+                console.log("Customer - onInit");
+                let oRouter = this.getOwnerComponent().getRouter();
+                let oRoute = oRouter.getRoute("RouteCustomer");
+                oRoute.attachPatternMatched(this._onPatternMatched, this);
             },
+
+            _onPatternMatched: function(oEvent){
+                console.log("Customer - onPatternMatched");
+                let sPath = decodeURIComponent(oEvent.getParameters().arguments.path);
+
+                this.getView().bindElement(sPath);
+
+                /*let oModel = this.getView().getModel();
+
+                oModel.read(sPath, {
+                    success: (oRetVal) => {
+                        debugger;
+                    }
+                });*/
+            },
+
+            onExit: function() {},
+            onBeforeRendering: function(){},
+            onAfterRendering: function() {},
 
             genderFormatter: function(sKey){
                 let oView = this.getView();
@@ -37,6 +61,18 @@ sap.ui.define([
 
                 //alert("Hello world!");
 
+            },
+
+            onNavBack: function(){
+                var oHistory = History.getInstance();
+                var sPreviousHash = oHistory.getPreviousHash();
+    
+                if (sPreviousHash !== undefined) {
+                    window.history.go(-1);
+                } else {
+                    var oRouter = this.getOwnerComponent().getRouter();
+                    oRouter.navTo("Main", {}, true);
+                }
             }
 
         });

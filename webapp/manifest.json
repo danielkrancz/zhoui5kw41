@@ -74,7 +74,7 @@
         "settings": {
           "defaultBindingMode": "TwoWay",
           "defaultCountMode": "Inline",
-          "refreshAfterChange": false,
+          "refreshAfterChange": true,
           "useBatch": false
         }
       },
@@ -103,7 +103,7 @@
       "routes": [
         {
           "name": "RouteCustomer",
-          "pattern": "customer",
+          "pattern": "customer/{path}",
           "target": [
             "TargetCustomer"
           ]

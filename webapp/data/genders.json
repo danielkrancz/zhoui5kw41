@@ -1,5 +1,12 @@
 {
     "genders": [
-        "female", "male"
+        {
+            "genderKey": "0",
+            "genderText": "male"
+        },
+        {
+            "genderKey": "1",
+            "genderText": "female"
+        }
     ]
 }

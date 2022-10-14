@@ -2,7 +2,7 @@
     <Page id="page" title="{i18n>title}">
         <content>
 
-            <Table headerText="{i18n>main.tableHeader}" items="{/CustomerSet}" alternateRowColors="true">
+            <Table headerText="{i18n>main.tableHeader}" items="{/CustomerSet}" alternateRowColors="true" mode="Delete" delete="onDeleteModePressed">
                 <columns>
 
                     <Column id="main_column_customerid">
@@ -29,20 +29,25 @@
                     <Column id="main_column_website" minScreenWidth="Tablet" demandPopin="true">
                         <Text id="main_text_website" text="{i18n>app.website}"/>
                     </Column>
-
+<!-- 
+                    <Column>
+                        <Text text="{i18n>main.actions}"/>
+                    </Column>
+-->
                 </columns>
 
                 <items>
-                    <ColumnListItem>
+                    <ColumnListItem type="Navigation" press="onListItemPressed">
                         <cells>
                             <ObjectIdentifier title="{CustomerId}"/>
                             <Text text="{Firstname}"/>
                             <Text text="{Lastname}"/>
                             <Text text="{AcademicTitle}"/>
-                            <Text text="{Gender}"/>
+                            <Text text="{= ${Gender} === '0' ? ${i18n>male} : ${i18n>female} }"/>
                             <Text text="{Email}"/>
                             <Text text="{Phone}"/>
                             <Link text="{Website}" href="https://{Website}" target="_blank"/>
+                            <!-- <Button icon="sap-icon://delete" type="Reject" press="onDeleteButtonPressed"/> -->
                         </cells>
                     </ColumnListItem>
                 </items>

@@ -1,5 +1,5 @@
 <mvc:View controllerName="at.clouddna.student00.zhoui5.controller.Customer" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
         <content>
             <f:SimpleForm
                 id="SimpleFormChange354"
@@ -21,21 +21,21 @@
                 singleContainerFullSize="false">
                 <f:content>
                     <Label id="customer_label_customerid" text="{i18n>app.customerid}" />
-                    <Input id="customer_input_customerid" value="{/customerid}" />
+                    <Input id="customer_input_customerid" value="{CustomerId}" />
 
                     <Label id="customer_label_firstname" text="{i18n>app.firstname}" />
-                    <Input id="customer_input_firstname" value="{/firstname}" />
+                    <Input id="customer_input_firstname" value="{Firstname}" />
 
                     <Label id="customer_label_lastname" text="{i18n>app.lastname}" />
-                    <Input id="customer_input_lastname" value="{/lastname}" />
+                    <Input id="customer_input_lastname" value="{Lastname}" />
 
                     <Label id="customer_label_title" text="{i18n>app.title}" />
-                    <Input id="customer_input_title" value="{/title}" />
+                    <Input id="customer_input_title" value="{AcademicTitle}" />
 
                     <Label id="customer_label_gender" text="{i18n>app.gender}" />
-                    <Select id="_IDGenSelect1" items="{genderModel>/genders}" selectedKey="{/gender}">
+                    <Select id="_IDGenSelect1" items="{genderModel>/genders}" selectedKey="{Gender}">
                         <items>
-                            <core:Item id="customer_item_template" key="{genderModel>}" text="{ path: 'genderModel>', formatter: '.genderFormatter'}"/>
+                            <core:Item id="customer_item_template" key="{genderModel>genderKey}" text="{ path: 'genderModel>genderText', formatter: '.genderFormatter'}"/>
                         <!-- <core:Item id="customer_item_template" key="{genderModel>}" text="{= ${genderModel>} === 'female' ? ${i18n>female} : ${i18n>male} }"/> -->
                         <!--
                             <core:Item id="_IDGenItem3" key="female" text="{i18n>female}"/>
@@ -46,13 +46,13 @@
                     </Select>
                     
                     <Label id="customer_label_email" text="{i18n>app.email}" />
-                    <Input id="customer_input_email" value="{/email}" />
+                    <Input id="customer_input_email" value="{Email}" />
 
                     <Label id="customer_label_phone" text="{i18n>app.phone}" />
-                    <Input id="customer_input_phone" value="{/phone}" />
+                    <Input id="customer_input_phone" value="{Phone}" />
 
                     <Label id="customer_label_website" text="{i18n>app.website}" />
-                    <Input id="customer_input_website" value="{/website}" />
+                    <Input id="customer_input_website" value="{Website}" />
                 </f:content>
             </f:SimpleForm>
             <!--
